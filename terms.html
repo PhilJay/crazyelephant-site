@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms · Crazy Elephant</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#d8e7ff">
+  <link rel="alternate" hreflang="en" href="https://philjay.github.io/crazyelephant-site/terms.html">
+  <link rel="alternate" hreflang="de" href="https://philjay.github.io/crazyelephant-site/de/terms.html">
+  <link rel="alternate" hreflang="es" href="https://philjay.github.io/crazyelephant-site/es/terms.html">
+  <link rel="alternate" hreflang="x-default" href="https://philjay.github.io/crazyelephant-site/terms.html">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- inlined from styles.css, run build.sh after editing it -->
+  <style>
+@font-face {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(assets/fonts/nunito-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: Anton;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/anton-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: "Dancing Script";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(assets/fonts/dancing-script.woff2) format('woff2');
+}
+
+:root {
+  --ink: #1e2a3a;
+  --ink-soft: rgba(30, 42, 58, 0.74);
+  --ink-dim: rgba(30, 42, 58, 0.56);
+  --navy: #26396a;
+  --star: #ffc928;
+  --star-deep: #e0a200;
+  --link: #2f6ae0;
+  --sky-light: linear-gradient(180deg, #d8e7ff 0%, #f7faff 100%);
+  --sky-game: linear-gradient(160deg, #4a85ff 0%, #b8ccff 100%);
+  --card: #fff;
+  --line: rgba(30, 42, 58, 0.1);
+  --shadow: 0 18px 48px rgba(38, 57, 106, 0.16);
+  --shadow-small: 0 8px 22px rgba(38, 57, 106, 0.12);
+  --label: Anton, Impact, "Arial Narrow", sans-serif;
+  --script: "Dancing Script", "Snell Roundhand", cursive;
+  --gutter: 64px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Nunito, -apple-system, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  color: var(--ink);
+  background: #f7faff;
+  overflow-x: hidden;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, p { margin: 0; }
+
+img { max-width: 100%; }
+
+.stage {
+  background: var(--sky-light) no-repeat;
+  background-size: 100% 1100px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  font-family: var(--script);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  white-space: nowrap;
+}
+.brand:hover { color: var(--ink); text-decoration: none; }
+.brand img { width: 40px; height: 40px; border-radius: 10px; box-shadow: var(--shadow-small); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  font-family: var(--label);
+  font-size: 15px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.nav-links a { color: var(--ink); }
+.nav-links a:hover { color: var(--link); text-decoration: none; }
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--star);
+  color: var(--ink);
+  font-family: var(--label);
+  font-size: 17px;
+  letter-spacing: 0.4px;
+  box-shadow: inset 0 -4px 0 var(--star-deep);
+  text-transform: none;
+}
+.button:hover { color: var(--ink); text-decoration: none; filter: brightness(1.04); }
+.nav-links .button { color: var(--ink); height: 40px; font-size: 16px; }
+
+.lang { display: inline-flex; align-items: center; gap: 8px; }
+.lang span { color: var(--ink-dim); }
+.nav-links .lang { font-size: 13px; }
+.nav-links .lang a { color: var(--ink-soft); }
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+.store-badge:hover { opacity: 0.82; }
+.store-badge img { height: 44px; width: auto; display: block; }
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-block: 40px 28px;
+  text-align: center;
+}
+.hero > * { position: relative; z-index: 1; }
+
+.eyebrow {
+  font-family: var(--label);
+  font-size: 14px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.hero h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-weight: 400;
+}
+.hero h1 .title {
+  font-family: var(--script);
+  font-weight: 700;
+  font-size: clamp(56px, 9vw, 104px);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.hero h1 .subtitle {
+  font-family: var(--label);
+  font-size: clamp(26px, 4vw, 40px);
+  line-height: 1.1;
+  letter-spacing: 0.3px;
+}
+
+.lead {
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 620px;
+}
+
+.cta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6px;
+}
+.cta-note { font-size: 15px; font-weight: 700; color: var(--ink-dim); }
+
+.deco { position: absolute; pointer-events: none; z-index: 0; height: auto; }
+.deco.cloud-a { width: 190px; left: -40px; top: 40px; opacity: 0.95; }
+.deco.cloud-b { width: 150px; right: -20px; top: 150px; }
+.deco.bird-a { width: 46px; left: 11%; top: 250px; transform: scaleX(-1) rotate(-8deg); }
+.deco.bird-b { width: 40px; right: 13%; top: 60px; transform: rotate(-6deg); }
+.deco.bird-c { width: 36px; right: 6%; top: 330px; transform: rotate(8deg); }
+
+.hero-video { position: relative; padding-block: 12px 72px; }
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  aspect-ratio: 2 / 1;
+  border-radius: 26px;
+  border: 8px solid #fff;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--sky-game);
+}
+.frame video,
+.frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-block: 24px 72px;
+}
+.section.centered { align-items: center; text-align: center; }
+.section h2 {
+  font-family: var(--script);
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+.section-intro {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 700px;
+}
+
+.stars-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  max-width: 900px;
+}
+.star-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 22px 18px;
+  border-radius: 20px;
+  background: var(--card);
+  box-shadow: var(--shadow-small);
+  text-align: center;
+}
+.star-card .stars { display: flex; gap: 4px; height: 34px; align-items: center; }
+.star-card .stars svg { width: 30px; height: 30px; }
+.star-card .stars svg.off { opacity: 0.18; }
+.star-text { display: flex; flex-direction: column; gap: 4px; }
+.star-card strong { font-family: var(--label); font-weight: 400; font-size: 20px; letter-spacing: 0.3px; }
+.star-card span { font-size: 15px; line-height: 1.45; color: var(--ink-soft); }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 24px 24px;
+  border-radius: 22px;
+  background: var(--card);
+  box-shadow: var(--shadow-small);
+  overflow: hidden;
+}
+.card img {
+  display: block;
+  width: calc(100% + 48px);
+  max-width: none;
+  height: auto;
+  margin: 0 -24px 12px;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  background: #b8ccff;
+}
+.card h3 { font-family: var(--label); font-weight: 400; font-size: 23px; letter-spacing: 0.3px; line-height: 1.15; }
+.card p { font-size: 15.5px; line-height: 1.5; color: var(--ink-soft); }
+.card .fine { font-size: 13.5px; color: var(--ink-dim); margin-top: auto; padding-top: 4px; }
+
+.band {
+  background: var(--sky-game);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.band .section-intro { color: rgba(255, 255, 255, 0.9); }
+.band .section { padding-block: 72px; }
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 44px;
+  align-items: center;
+}
+.split-text { display: flex; flex-direction: column; gap: 18px; }
+
+.packs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.packs li {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--ink);
+  box-shadow: var(--shadow-small);
+}
+.packs .pack {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 16px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+.js .packs li { transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease; }
+.js .packs li:has([aria-pressed="false"]) { background: rgba(255, 255, 255, 0.8); }
+.js .packs li:hover { transform: translateY(-2px); background: #fff; }
+.js .packs li:has([aria-pressed="true"]) { background: #fff; box-shadow: 0 0 0 4px var(--star), var(--shadow-small); }
+.js .packs .pack { cursor: pointer; }
+.packs .pack:focus-visible { outline: 3px solid var(--navy); outline-offset: 4px; }
+.pack-shot { transition: opacity 0.2s ease; }
+.pack-shot.fading { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .js .packs li, .pack-shot { transition: none; }
+  .js .packs li:hover { transform: none; }
+}
+.packs .pack-name { font-family: var(--script); font-weight: 700; font-size: 30px; line-height: 1; min-width: 86px; flex: none; white-space: nowrap; }
+.packs .pack-info { display: flex; flex-direction: column; gap: 2px; font-size: 14.5px; line-height: 1.35; color: var(--ink-soft); }
+.packs .pack-info b { font-family: var(--label); font-weight: 400; font-size: 17px; color: var(--ink); letter-spacing: 0.3px; }
+.tag {
+  margin-left: auto;
+  flex: none;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--star);
+  font-family: var(--label);
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.tag.navy { background: var(--navy); color: #fff; }
+
+.shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 6px solid #fff;
+  box-shadow: 0 24px 60px rgba(20, 40, 100, 0.28);
+  aspect-ratio: 2 / 1;
+  background: #b8ccff;
+}
+
+.pieces-head { display: flex; flex-direction: column; gap: 10px; margin-top: 36px; }
+.pieces-head h3 { font-family: var(--label); font-weight: 400; font-size: 26px; letter-spacing: 0.4px; }
+.pieces {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.piece {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px 16px;
+  border-radius: 18px;
+  background: #fff;
+  color: var(--ink);
+  box-shadow: var(--shadow-small);
+}
+.piece-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 64px;
+  border-radius: 12px;
+  background: #eaf1ff;
+  margin-bottom: 4px;
+}
+.piece-art img { height: 36px; width: auto; }
+.piece-art .tall { height: 46px; }
+.piece-art .arrows { font-family: var(--label); font-size: 18px; color: var(--navy); letter-spacing: 1px; }
+.piece-art .wall { height: 46px; }
+.piece-art .wall.flat { height: 60px; transform: rotate(90deg); margin: 0 12px; }
+.piece-art .bouncer { height: 30px; }
+.piece-art .bouncer.big { height: 56px; }
+.piece-art .superball { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; border: 6px solid #dc1a1f; background: #fff; color: #dc1a1f; font: 900 11px/1 system-ui, sans-serif; box-sizing: border-box; }
+.piece-art .wind { display: flex; align-items: center; justify-content: center; width: 78px; height: 44px; border: 2px dashed #4a85ff; border-radius: 8px; background: #7ea8ff; }
+.piece-art .wind img { height: 14px; }
+.piece h4 { margin: 0; font-family: var(--label); font-weight: 400; font-size: 18px; letter-spacing: 0.3px; }
+.piece p { font-size: 14px; line-height: 1.45; color: var(--ink-soft); }
+.classic { font-size: 16px; line-height: 1.55; color: rgba(255, 255, 255, 0.92); }
+
+.special-packs { display: flex; flex-direction: column; gap: 16px; margin-top: 36px; }
+.special-head { font-family: var(--label); font-weight: 400; font-size: 26px; letter-spacing: 0.4px; }
+.night .section-intro strong { color: #fff; }
+.night {
+  padding: 44px;
+  border-radius: 28px;
+  background: linear-gradient(160deg, #2b1c57 0%, #4a2f7d 100%);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.night .section-intro { color: rgba(255, 255, 255, 0.88); }
+.night .tag { align-self: flex-start; margin-left: 0; }
+.night h3 { font-family: var(--label); font-weight: 400; font-size: 20px; letter-spacing: 0.4px; margin: 4px 0 -6px; }
+.night-pieces { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.night-pieces li {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 15px;
+  font-weight: 700;
+}
+.night .shot { border-color: rgba(255, 255, 255, 0.16); background: #2b1c57; box-shadow: 0 24px 60px rgba(10, 4, 30, 0.45); }
+
+.boards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.boards li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px 18px;
+  border-radius: 20px;
+  background: var(--card);
+  box-shadow: var(--shadow-small);
+}
+.boards strong { font-family: var(--label); font-weight: 400; font-size: 20px; letter-spacing: 0.3px; }
+.boards span { font-size: 15px; line-height: 1.45; color: var(--ink-soft); }
+
+.badges {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.badges li { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.badges img {
+  width: 100%;
+  max-width: 108px;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: var(--shadow-small);
+}
+.badges span { font-family: var(--label); font-size: 15px; letter-spacing: 0.3px; line-height: 1.2; }
+
+.faq { width: 100%; max-width: 780px; display: flex; flex-direction: column; gap: 12px; }
+.faq details {
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow-small);
+  padding: 0 22px;
+}
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 18px;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--label);
+  font-size: 19px;
+  letter-spacing: 0.3px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+";
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-family: Nunito, sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1;
+}
+.faq details[open] summary::after { content: "\2212"; }
+.faq details p { padding-bottom: 18px; font-size: 16px; line-height: 1.55; color: var(--ink-soft); }
+
+.closing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-block: 24px 64px;
+  text-align: center;
+}
+.closing img.elephant { width: 150px; height: auto; }
+.closing h2 { font-family: var(--script); font-weight: 700; font-size: 48px; line-height: 1.05; }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-block: 28px 40px;
+  background: linear-gradient(var(--line), var(--line)) center top / calc(100% - 2 * var(--gutter)) 1px no-repeat;
+  font-size: 14px;
+  color: var(--ink-dim);
+}
+.footer nav { display: flex; gap: 22px; flex-wrap: wrap; }
+.footer a { color: var(--ink-soft); font-weight: 700; }
+
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-block: 32px 72px;
+  font-size: 16.5px;
+  line-height: 1.62;
+  color: var(--ink-soft);
+}
+.legal-card {
+  padding: 40px 44px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow-small);
+}
+.legal h1 { font-family: var(--script); font-weight: 700; font-size: 52px; line-height: 1.05; color: var(--ink); margin-bottom: 8px; }
+.legal h2 { font-family: var(--label); font-weight: 400; font-size: 22px; letter-spacing: 0.3px; color: var(--ink); margin-top: 34px; margin-bottom: 8px; }
+.legal p { margin-bottom: 14px; }
+.legal ul { margin: 0 0 14px; padding-left: 22px; }
+.legal li { margin-bottom: 6px; }
+.legal .updated { font-size: 14px; color: var(--ink-dim); }
+.legal .back { display: inline-block; margin-top: 28px; font-weight: 700; }
+
+.not-found { display: flex; flex-direction: column; align-items: center; gap: 18px; padding-block: 48px 96px; text-align: center; }
+.not-found img { width: 160px; height: auto; }
+.not-found h1 { font-family: var(--script); font-weight: 700; font-size: 60px; line-height: 1; }
+.not-found p { font-size: 18px; color: var(--ink-soft); }
+
+@media (max-width: 1100px) {
+  .badges { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 560px; }
+}
+
+@media (max-width: 900px) {
+  :root { --gutter: 32px; }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .split { grid-template-columns: 1fr; gap: 28px; }
+  .pieces { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .nav-links a:not(.button) { display: none; }
+  .nav-links .lang { display: none; }
+}
+
+@media (max-width: 600px) {
+  :root { --gutter: 16px; }
+  .nav { padding-block: 14px; }
+  .brand { font-size: 24px; }
+  .brand img { width: 36px; height: 36px; }
+  .hero { padding-top: 20px; gap: 14px; }
+  .lead { font-size: 17px; }
+  .deco.cloud-a { width: 120px; left: -44px; top: 10px; }
+  .deco.cloud-a { opacity: 0.8; }
+  .deco.bird-a, .deco.bird-b, .deco.cloud-b { display: none; }
+  .deco.bird-c { display: none; }
+  .hero-video { padding-bottom: 48px; }
+  .frame { border-width: 5px; border-radius: 16px; }
+  .section { padding-bottom: 56px; }
+  .section h2 { font-size: 42px; }
+  .band .section { padding-block: 52px; }
+  .stars-row { grid-template-columns: 1fr; gap: 10px; }
+  .boards { grid-template-columns: 1fr; gap: 10px; }
+  .boards li { padding: 14px 16px; }
+  .star-card { flex-direction: row; text-align: left; padding: 14px 16px; gap: 14px; }
+  .star-card .stars { flex: none; width: 102px; }
+  .star-card .stars svg { width: 28px; height: 28px; }
+  .star-text { display: flex; flex-direction: column; gap: 2px; }
+  .cards { grid-template-columns: 1fr; gap: 16px; }
+  .card { padding: 0 20px 20px; }
+  .card img { width: calc(100% + 40px); margin: 0 -20px 10px; }
+  .packs .pack { gap: 12px; padding: 12px 14px; }
+  .packs .pack-name { font-size: 26px; min-width: 64px; }
+  .tag { font-size: 11px; padding: 3px 8px; }
+  .shot { border-width: 4px; border-radius: 14px; }
+  .night { padding: 24px 18px; border-radius: 20px; }
+  .pieces { gap: 10px; }
+  .piece { padding: 12px; }
+  .piece-art { height: 56px; }
+  .badges { gap: 14px 10px; }
+  .badges span { font-size: 13px; }
+  .faq details { padding: 0 16px; }
+  .faq summary { font-size: 17px; }
+  .closing h2 { font-size: 40px; }
+  .legal-card { padding: 28px 20px; border-radius: 18px; }
+  .legal h1 { font-size: 42px; }
+}
+  </style>
+  <!-- end styles.css -->
+</head>
+<body>
+<div class="stage">
+  <header class="wrap nav">
+    <a class="brand" href="index.html"><img src="assets/icon-96.png" alt="" width="40" height="40">Crazy Elephant</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <span class="lang"><a href="de/terms.html" hreflang="de" lang="de">Deutsch</a><span aria-hidden="true">·</span><a href="es/terms.html" hreflang="es" lang="es">Español</a></span>
+    </nav>
+  </header>
+
+  <main class="wrap legal">
+    <div class="legal-card">
+      <h1>Terms and conditions</h1>
+      <p class="updated">Last updated: 28 September 2026</p>
+
+      <p>These terms govern your use of the Crazy Elephant game for iPhone and iPad and this website. By installing or playing Crazy Elephant you agree to them. If you do not agree, please do not use the game.</p>
+
+      <h2>The short version</h2>
+      <ul>
+        <li>Crazy Elephant is free to download. Pack 1 is free, and more packs and extra balls are optional in-app purchases.</li>
+        <li>Purchases are handled by Apple. Refunds go through Apple too.</li>
+        <li>Play fair on the leaderboards.</li>
+        <li>The levels you build are yours.</li>
+        <li>The game is provided as is. We do not promise it is free of bugs or that it stays available.</li>
+      </ul>
+
+      <h2>Who provides Crazy Elephant</h2>
+      <p>Philipp Jahoda<br>Industriezeile 35<br>4020 Linz<br>Austria</p>
+      <p>Email: <a href="mailto:philjay.librarysup@gmail.com">philjay.librarysup@gmail.com</a></p>
+
+      <h2>Using the game</h2>
+      <p>You get a personal, non exclusive, non transferable licence to use Crazy Elephant on devices you own or control, for as long as you comply with these terms and the App Store's usage rules. You may not copy, sell, rent, reverse engineer or attempt to extract the source code of the game, except where the law expressly allows it. The game, its name, its icon, its art, its levels and its design remain ours.</p>
+
+      <h2>In-app purchases</h2>
+      <p>Crazy Elephant offers these in-app purchases through the App Store:</p>
+      <ul>
+        <li><strong>Unlock All Packs</strong> opens every level pack, now and later. It is a one-time purchase for your Apple Account.</li>
+        <li><strong>Extra balls</strong> (1 or 5) give you one more ball in any level. They are used up when you use them, and a used extra ball cannot be returned.</li>
+      </ul>
+      <p>The payment, the receipt and any refund are handled by Apple, not by us. Prices are shown before you confirm. Refunds are granted by Apple under their own policy, so refund requests go to Apple. Unlock All Packs comes back on any device with Restore purchases in the shop. Extra balls you have not used yet sync through your iCloud account; with iCloud turned off, they stay on the device where you bought them. Your statutory consumer rights under Austrian and EU law are not affected by anything in this section.</p>
+
+      <h2>Fair play</h2>
+      <p>Leaderboards and achievements run on Apple's Game Center and are meant to compare real play. Do not use cheats, modified versions of the game, automation or other tricks to post scores or earn achievements. We may ask Apple to remove scores that were clearly not reached by playing, and Apple's Game Center terms apply to what you post there, including your nickname.</p>
+
+      <h2>Your own levels</h2>
+      <p>The levels you build in the level editor are yours. They are stored on your device, we do not collect them, and we claim no rights to them. We cannot recover them if you delete the app or lose your device, so keep that in mind before you delete it.</p>
+
+      <h2>What Crazy Elephant does not promise</h2>
+      <p>Crazy Elephant is provided as is and as available. We do not promise that it is free of bugs, that it runs on every device or iOS version, or that a level, a pack, a purchase or an online feature such as iCloud sync or Game Center will stay available. Apple may change how iCloud, Game Center or the App Store work, and an update can change a feature. We may change levels, par values and balancing in updates.</p>
+
+      <h2>Your data</h2>
+      <p>Your progress is saved on your device and, if you use iCloud, in your own iCloud account. The <a href="privacy.html">privacy notice</a> explains what is and is not collected.</p>
+
+      <h2>Liability</h2>
+      <p>We are not liable for lost progress, lost levels, lost profits or indirect damage, or for services run by Apple such as iCloud, Game Center and the App Store.</p>
+      <p>Nothing here limits liability that cannot be limited by law, including under the Austrian Product Liability Act and mandatory consumer protection rules. Where a term of these conditions turns out to be invalid, the rest stays in force.</p>
+
+      <h2>Changes and governing law</h2>
+      <p>We may update these terms. The current version always lives at this address, with the date at the top, and continuing to play Crazy Elephant after a change means you accept it. Austrian law applies, excluding its conflict of law rules and the UN Convention on Contracts for the International Sale of Goods. If you are a consumer in the EU, you keep the protection of the mandatory rules of the country you live in, and you may bring a claim in your own country's courts.</p>
+
+      <a class="back" href="index.html">Back to Crazy Elephant</a>
+    </div>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© 2026 Philipp Jahoda</span>
+    <nav aria-label="Footer">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="imprint.html">Imprint</a>
+      <span class="lang"><a href="de/terms.html" hreflang="de" lang="de">Deutsch</a><span aria-hidden="true">·</span><a href="es/terms.html" hreflang="es" lang="es">Español</a></span>
+    </nav>
+  </footer>
+</div>
+</body>
+</html>

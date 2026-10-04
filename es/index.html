@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crazy Elephant: revienta todos los pájaros con menos tiros</title>
+  <meta name="description" content="Apunta, elige la fuerza y dispara. Revienta todos los pájaros con los menos tiros posibles en 80 niveles hechos a mano para iPhone y iPad. Gratis, sin anuncios y sin cuenta.">
+  <meta name="theme-color" content="#d8e7ff">
+  <link rel="canonical" href="https://philjay.github.io/crazyelephant-site/es/">
+  <link rel="alternate" hreflang="en" href="https://philjay.github.io/crazyelephant-site/">
+  <link rel="alternate" hreflang="de" href="https://philjay.github.io/crazyelephant-site/de/">
+  <link rel="alternate" hreflang="es" href="https://philjay.github.io/crazyelephant-site/es/">
+  <link rel="alternate" hreflang="x-default" href="https://philjay.github.io/crazyelephant-site/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Crazy Elephant">
+  <meta property="og:title" content="Crazy Elephant: revienta todos los pájaros con menos tiros">
+  <meta property="og:description" content="80 niveles hechos a mano para iPhone y iPad. Apunta, elige la fuerza, dispara y revienta todos los pájaros dentro del par para ganar tres estrellas.">
+  <meta property="og:url" content="https://philjay.github.io/crazyelephant-site/es/">
+  <meta property="og:image" content="https://philjay.github.io/crazyelephant-site/assets/og-image.png?v=20261002">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="El icono de Crazy Elephant, el elefante y un nivel lleno de pájaros">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="apple-itunes-app" content="app-id=621333141">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="de_DE">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Crazy Elephant", "description": "Apunta, elige la fuerza y dispara. Revienta todos los pájaros con los menos tiros posibles en 80 niveles hechos a mano para iPhone y iPad.", "operatingSystem": "iOS", "applicationCategory": "GameApplication", "genre": "Puzzle", "url": "https://philjay.github.io/crazyelephant-site/es/", "installUrl": "https://apps.apple.com/app/id621333141", "sameAs": ["https://apps.apple.com/app/id621333141"], "image": "https://philjay.github.io/crazyelephant-site/assets/apple-touch-icon.png", "screenshot": "https://philjay.github.io/crazyelephant-site/assets/og-image.png?v=20261002", "inLanguage": ["en", "de", "es"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "author": {"@type": "Person", "name": "Philipp Jahoda", "url": "https://philjay.cc/"}}</script>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- inlined from styles.css, run build.sh after editing it -->
+  <style>
+@font-face {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(../assets/fonts/nunito-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: Anton;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../assets/fonts/anton-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: "Dancing Script";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(../assets/fonts/dancing-script.woff2) format('woff2');
+}
+
+:root {
+  --ink: #1e2a3a;
+  --ink-soft: rgba(30, 42, 58, 0.74);
+  --ink-dim: rgba(30, 42, 58, 0.56);
+  --navy: #26396a;
+  --star: #ffc928;
+  --star-deep: #e0a200;
+  --link: #2f6ae0;
+  --sky-light: linear-gradient(180deg, #d8e7ff 0%, #f7faff 100%);
+  --sky-game: linear-gradient(160deg, #4a85ff 0%, #b8ccff 100%);
+  --card: #fff;
+  --line: rgba(30, 42, 58, 0.1);
+  --shadow: 0 18px 48px rgba(38, 57, 106, 0.16);
+  --shadow-small: 0 8px 22px rgba(38, 57, 106, 0.12);
+  --label: Anton, Impact, "Arial Narrow", sans-serif;
+  --script: "Dancing Script", "Snell Roundhand", cursive;
+  --gutter: 64px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Nunito, -apple-system, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  color: var(--ink);
+  background: #f7faff;
+  overflow-x: hidden;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, p { margin: 0; }
+
+img { max-width: 100%; }
+
+.stage {
+  background: var(--sky-light) no-repeat;
+  background-size: 100% 1100px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  font-family: var(--script);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  white-space: nowrap;
+}
+.brand:hover { color: var(--ink); text-decoration: none; }
+.brand img { width: 40px; height: 40px; border-radius: 10px; box-shadow: var(--shadow-small); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  font-family: var(--label);
+  font-size: 15px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.nav-links a { color: var(--ink); }
+.nav-links a:hover { color: var(--link); text-decoration: none; }
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--star);
+  color: var(--ink);
+  font-family: var(--label);
+  font-size: 17px;
+  letter-spacing: 0.4px;
+  box-shadow: inset 0 -4px 0 var(--star-deep);
+  text-transform: none;
+}
+.button:hover { color: var(--ink); text-decoration: none; filter: brightness(1.04); }
+.nav-links .button { color: var(--ink); height: 40px; font-size: 16px; }
+
+.lang { display: inline-flex; align-items: center; gap: 8px; }
+.lang span { color: var(--ink-dim); }
+.nav-links .lang { font-size: 13px; }
+.nav-links .lang a { color: var(--ink-soft); }
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+.store-badge:hover { opacity: 0.82; }
+.store-badge img { height: 44px; width: auto; display: block; }
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-block: 40px 28px;
+  text-align: center;
+}
+.hero > * { position: relative; z-index: 1; }
+
+.eyebrow {
+  font-family: var(--label);
+  font-size: 14px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.hero h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-weight: 400;
+}
+.hero h1 .title {
+  font-family: var(--script);
+  font-weight: 700;
+  font-size: clamp(56px, 9vw, 104px);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.hero h1 .subtitle {
+  font-family: var(--label);
+  font-size: clamp(26px, 4vw, 40px);
+  line-height: 1.1;
+  letter-spacing: 0.3px;
+}
+
+.lead {
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 620px;
+}
+
+.cta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6px;
+}
+.cta-note { font-size: 15px; font-weight: 700; color: var(--ink-dim); }
+
+.deco { position: absolute; pointer-events: none; z-index: 0; height: auto; }
+.deco.cloud-a { width: 190px; left: -40px; top: 40px; opacity: 0.95; }
+.deco.cloud-b { width: 150px; right: -20px; top: 150px; }
+.deco.bird-a { width: 46px; left: 11%; top: 250px; transform: scaleX(-1) rotate(-8deg); }
+.deco.bird-b { width: 40px; right: 13%; top: 60px; transform: rotate(-6deg); }
+.deco.bird-c { width: 36px; right: 6%; top: 330px; transform: rotate(8deg); }
+
+.hero-video { position: relative; padding-block: 12px 72px; }
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  aspect-ratio: 2 / 1;
+  border-radius: 26px;
+  border: 8px solid #fff;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--sky-game);
+}
+.frame video,
+.frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-block: 24px 72px;
+}
+.section.centered { align-items: center; text-align: center; }
+.section h2 {
+  font-family: var(--script);
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+.section-intro {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 700px;
+}
+
+.stars-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  max-width: 900px;
+}
+.star-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 22px 18px;
+  border-radius: 20px;
+  background: var(--card);
+  box-shadow: var(--shadow-small);
+  text-align: center;
+}
+.star-card .stars { display: flex; gap: 4px; height: 34px; align-items: center; }
+.star-card .stars svg { width: 30px; height: 30px; }
+.star-card .stars svg.off { opacity: 0.18; }
+.star-text { display: flex; flex-direction: column; gap: 4px; }
+.star-card strong { font-family: var(--label); font-weight: 400; font-size: 20px; letter-spacing: 0.3px; }
+.star-card span { font-size: 15px; line-height: 1.45; color: var(--ink-soft); }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 24px 24px;
+  border-radius: 22px;
+  background: var(--card);
+  box-shadow: var(--shadow-small);
+  overflow: hidden;
+}
+.card img {
+  display: block;
+  width: calc(100% + 48px);
+  max-width: none;
+  height: auto;
+  margin: 0 -24px 12px;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  background: #b8ccff;
+}
+.card h3 { font-family: var(--label); font-weight: 400; font-size: 23px; letter-spacing: 0.3px; line-height: 1.15; }
+.card p { font-size: 15.5px; line-height: 1.5; color: var(--ink-soft); }
+.card .fine { font-size: 13.5px; color: var(--ink-dim); margin-top: auto; padding-top: 4px; }
+
+.band {
+  background: var(--sky-game);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.band .section-intro { color: rgba(255, 255, 255, 0.9); }
+.band .section { padding-block: 72px; }
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 44px;
+  align-items: center;
+}
+.split-text { display: flex; flex-direction: column; gap: 18px; }
+
+.packs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.packs li {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--ink);
+  box-shadow: var(--shadow-small);
+}
+.packs .pack {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 16px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+.js .packs li { transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease; }
+.js .packs li:has([aria-pressed="false"]) { background: rgba(255, 255, 255, 0.8); }
+.js .packs li:hover { transform: translateY(-2px); background: #fff; }
+.js .packs li:has([aria-pressed="true"]) { background: #fff; box-shadow: 0 0 0 4px var(--star), var(--shadow-small); }
+.js .packs .pack { cursor: pointer; }
+.packs .pack:focus-visible { outline: 3px solid var(--navy); outline-offset: 4px; }
+.pack-shot { transition: opacity 0.2s ease; }
+.pack-shot.fading { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .js .packs li, .pack-shot { transition: none; }
+  .js .packs li:hover { transform: none; }
+}
+.packs .pack-name { font-family: var(--script); font-weight: 700; font-size: 30px; line-height: 1; min-width: 86px; flex: none; white-space: nowrap; }
+.packs .pack-info { display: flex; flex-direction: column; gap: 2px; font-size: 14.5px; line-height: 1.35; color: var(--ink-soft); }
+.packs .pack-info b { font-family: var(--label); font-weight: 400; font-size: 17px; color: var(--ink); letter-spacing: 0.3px; }
+.tag {
+  margin-left: auto;
+  flex: none;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--star);
+  font-family: var(--label);
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.tag.navy { background: var(--navy); color: #fff; }
+
+.shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 6px solid #fff;
+  box-shadow: 0 24px 60px rgba(20, 40, 100, 0.28);
+  aspect-ratio: 2 / 1;
+  background: #b8ccff;
+}
+
+.pieces-head { display: flex; flex-direction: column; gap: 10px; margin-top: 36px; }
+.pieces-head h3 { font-family: var(--label); font-weight: 400; font-size: 26px; letter-spacing: 0.4px; }
+.pieces {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.piece {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px 16px;
+  border-radius: 18px;
+  background: #fff;
+  color: var(--ink);
+  box-shadow: var(--shadow-small);
+}
+.piece-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 64px;
+  border-radius: 12px;
+  background: #eaf1ff;
+  margin-bottom: 4px;
+}
+.piece-art img { height: 36px; width: auto; }
+.piece-art .tall { height: 46px; }
+.piece-art .arrows { font-family: var(--label); font-size: 18px; color: var(--navy); letter-spacing: 1px; }
+.piece-art .wall { height: 46px; }
+.piece-art .wall.flat { height: 60px; transform: rotate(90deg); margin: 0 12px; }
+.piece-art .bouncer { height: 30px; }
+.piece-art .bouncer.big { height: 56px; }
+.piece-art .superball { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; border: 6px solid #dc1a1f; background: #fff; color: #dc1a1f; font: 900 11px/1 system-ui, sans-serif; box-sizing: border-box; }
+.piece-art .wind { display: flex; align-items: center; justify-content: center; width: 78px; height: 44px; border: 2px dashed #4a85ff; border-radius: 8px; background: #7ea8ff; }
+.piece-art .wind img { height: 14px; }
+.piece h4 { margin: 0; font-family: var(--label); font-weight: 400; font-size: 18px; letter-spacing: 0.3px; }
+.piece p { font-size: 14px; line-height: 1.45; color: var(--ink-soft); }
+.classic { font-size: 16px; line-height: 1.55; color: rgba(255, 255, 255, 0.92); }
+
+.special-packs { display: flex; flex-direction: column; gap: 16px; margin-top: 36px; }
+.special-head { font-family: var(--label); font-weight: 400; font-size: 26px; letter-spacing: 0.4px; }
+.night .section-intro strong { color: #fff; }
+.night {
+  padding: 44px;
+  border-radius: 28px;
+  background: linear-gradient(160deg, #2b1c57 0%, #4a2f7d 100%);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.night .section-intro { color: rgba(255, 255, 255, 0.88); }
+.night .tag { align-self: flex-start; margin-left: 0; }
+.night h3 { font-family: var(--label); font-weight: 400; font-size: 20px; letter-spacing: 0.4px; margin: 4px 0 -6px; }
+.night-pieces { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.night-pieces li {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 15px;
+  font-weight: 700;
+}
+.night .shot { border-color: rgba(255, 255, 255, 0.16); background: #2b1c57; box-shadow: 0 24px 60px rgba(10, 4, 30, 0.45); }
+
+.boards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.boards li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px 18px;
+  border-radius: 20px;
+  background: var(--card);
+  box-shadow: var(--shadow-small);
+}
+.boards strong { font-family: var(--label); font-weight: 400; font-size: 20px; letter-spacing: 0.3px; }
+.boards span { font-size: 15px; line-height: 1.45; color: var(--ink-soft); }
+
+.badges {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.badges li { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.badges img {
+  width: 100%;
+  max-width: 108px;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: var(--shadow-small);
+}
+.badges span { font-family: var(--label); font-size: 15px; letter-spacing: 0.3px; line-height: 1.2; }
+
+.faq { width: 100%; max-width: 780px; display: flex; flex-direction: column; gap: 12px; }
+.faq details {
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow-small);
+  padding: 0 22px;
+}
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 18px;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--label);
+  font-size: 19px;
+  letter-spacing: 0.3px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+";
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-family: Nunito, sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1;
+}
+.faq details[open] summary::after { content: "\2212"; }
+.faq details p { padding-bottom: 18px; font-size: 16px; line-height: 1.55; color: var(--ink-soft); }
+
+.closing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-block: 24px 64px;
+  text-align: center;
+}
+.closing img.elephant { width: 150px; height: auto; }
+.closing h2 { font-family: var(--script); font-weight: 700; font-size: 48px; line-height: 1.05; }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-block: 28px 40px;
+  background: linear-gradient(var(--line), var(--line)) center top / calc(100% - 2 * var(--gutter)) 1px no-repeat;
+  font-size: 14px;
+  color: var(--ink-dim);
+}
+.footer nav { display: flex; gap: 22px; flex-wrap: wrap; }
+.footer a { color: var(--ink-soft); font-weight: 700; }
+
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-block: 32px 72px;
+  font-size: 16.5px;
+  line-height: 1.62;
+  color: var(--ink-soft);
+}
+.legal-card {
+  padding: 40px 44px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow-small);
+}
+.legal h1 { font-family: var(--script); font-weight: 700; font-size: 52px; line-height: 1.05; color: var(--ink); margin-bottom: 8px; }
+.legal h2 { font-family: var(--label); font-weight: 400; font-size: 22px; letter-spacing: 0.3px; color: var(--ink); margin-top: 34px; margin-bottom: 8px; }
+.legal p { margin-bottom: 14px; }
+.legal ul { margin: 0 0 14px; padding-left: 22px; }
+.legal li { margin-bottom: 6px; }
+.legal .updated { font-size: 14px; color: var(--ink-dim); }
+.legal .back { display: inline-block; margin-top: 28px; font-weight: 700; }
+
+.not-found { display: flex; flex-direction: column; align-items: center; gap: 18px; padding-block: 48px 96px; text-align: center; }
+.not-found img { width: 160px; height: auto; }
+.not-found h1 { font-family: var(--script); font-weight: 700; font-size: 60px; line-height: 1; }
+.not-found p { font-size: 18px; color: var(--ink-soft); }
+
+@media (max-width: 1100px) {
+  .badges { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 560px; }
+}
+
+@media (max-width: 900px) {
+  :root { --gutter: 32px; }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .split { grid-template-columns: 1fr; gap: 28px; }
+  .pieces { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .nav-links a:not(.button) { display: none; }
+  .nav-links .lang { display: none; }
+}
+
+@media (max-width: 600px) {
+  :root { --gutter: 16px; }
+  .nav { padding-block: 14px; }
+  .brand { font-size: 24px; }
+  .brand img { width: 36px; height: 36px; }
+  .hero { padding-top: 20px; gap: 14px; }
+  .lead { font-size: 17px; }
+  .deco.cloud-a { width: 120px; left: -44px; top: 10px; }
+  .deco.cloud-a { opacity: 0.8; }
+  .deco.bird-a, .deco.bird-b, .deco.cloud-b { display: none; }
+  .deco.bird-c { display: none; }
+  .hero-video { padding-bottom: 48px; }
+  .frame { border-width: 5px; border-radius: 16px; }
+  .section { padding-bottom: 56px; }
+  .section h2 { font-size: 42px; }
+  .band .section { padding-block: 52px; }
+  .stars-row { grid-template-columns: 1fr; gap: 10px; }
+  .boards { grid-template-columns: 1fr; gap: 10px; }
+  .boards li { padding: 14px 16px; }
+  .star-card { flex-direction: row; text-align: left; padding: 14px 16px; gap: 14px; }
+  .star-card .stars { flex: none; width: 102px; }
+  .star-card .stars svg { width: 28px; height: 28px; }
+  .star-text { display: flex; flex-direction: column; gap: 2px; }
+  .cards { grid-template-columns: 1fr; gap: 16px; }
+  .card { padding: 0 20px 20px; }
+  .card img { width: calc(100% + 40px); margin: 0 -20px 10px; }
+  .packs .pack { gap: 12px; padding: 12px 14px; }
+  .packs .pack-name { font-size: 26px; min-width: 64px; }
+  .tag { font-size: 11px; padding: 3px 8px; }
+  .shot { border-width: 4px; border-radius: 14px; }
+  .night { padding: 24px 18px; border-radius: 20px; }
+  .pieces { gap: 10px; }
+  .piece { padding: 12px; }
+  .piece-art { height: 56px; }
+  .badges { gap: 14px 10px; }
+  .badges span { font-size: 13px; }
+  .faq details { padding: 0 16px; }
+  .faq summary { font-size: 17px; }
+  .closing h2 { font-size: 40px; }
+  .legal-card { padding: 28px 20px; border-radius: 18px; }
+  .legal h1 { font-size: 42px; }
+}
+  </style>
+  <!-- end styles.css -->
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="star" viewBox="0 0 24 24"><path d="M12 2.2l2.95 6.2 6.8.85-5 4.7 1.28 6.75L12 17.4l-6.03 3.3 1.28-6.75-5-4.7 6.8-.85z" fill="#ffc928" stroke="#e0a200" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="stage">
+  <header class="wrap nav">
+    <a class="brand" href="#"><img src="../assets/icon-96.png" alt="" width="40" height="40">Crazy Elephant</a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#features">Características</a>
+      <a href="#levels">Niveles</a>
+      <a href="#faq">Preguntas</a>
+      <span class="lang"><a href="../" hreflang="en" lang="en">English</a><span aria-hidden="true">·</span><a href="../de/" hreflang="de" lang="de">Deutsch</a></span>
+      <a class="button" href="https://apps.apple.com/app/id621333141">App Store</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <img class="deco cloud-a" src="../assets/art/cloud-1.svg" alt="" width="200" height="100">
+      <img class="deco cloud-b" src="../assets/art/cloud-3.svg" alt="" width="200" height="100">
+      <img class="deco bird-a" src="../assets/art/bird-red.svg" alt="" width="120" height="100">
+      <img class="deco bird-b" src="../assets/art/bird-yellow.svg" alt="" width="120" height="100">
+      <img class="deco bird-c" src="../assets/art/bird-violet.svg" alt="" width="120" height="100">
+      <p class="eyebrow">Un juego de tiros de habilidad para iPhone y iPad</p>
+      <h1><span class="title">Crazy Elephant</span><span class="subtitle">Revienta todos los pájaros con menos tiros</span></h1>
+      <p class="lead">Un elefante dispara bolas de bolos al cielo, y todos los pájaros de ahí arriba tienen que reventar. Apunta, elige la fuerza, dispara y revienta todos con los menos tiros posibles. 80 niveles hechos a mano, y siguen llegando niveles nuevos.</p>
+      <div class="cta">
+        <a class="store-badge" href="https://apps.apple.com/app/id621333141" aria-label="Descarga Crazy Elephant en el App Store">
+          <img src="../assets/app-store-badge-black.svg" alt="" width="120" height="40">
+        </a>
+        <span class="cta-note">Gratis. Sin anuncios. Sin cuenta.</span>
+      </div>
+    </section>
+
+    <div class="wrap hero-video">
+      <div class="frame">
+        <video autoplay muted loop playsinline poster="../assets/hero-poster.webp?v=20261002" aria-label="El nivel 20 jugado con tres estrellas y oro: tres tiros revientan todos los pájaros entre los muros de ladrillo y el pájaro dorado de arriba">
+          <source src="../assets/hero.mp4?v=20261002" type="video/mp4">
+          <source src="../assets/hero.webm?v=20261002" type="video/webm">
+        </video>
+      </div>
+    </div>
+
+    <section class="wrap section centered" aria-labelledby="how">
+      <h2 id="how">Cómo se juega</h2>
+      <div class="stars-row">
+        <div class="star-card">
+          <div class="stars" aria-label="Una estrella"><svg aria-hidden="true"><use href="#star"/></svg><svg class="off" aria-hidden="true"><use href="#star"/></svg><svg class="off" aria-hidden="true"><use href="#star"/></svg></div>
+          <p class="star-text"><strong>Superado</strong><span>Revienta suficientes pájaros para superar el nivel y gana una estrella.</span></p>
+        </div>
+        <div class="star-card">
+          <div class="stars" aria-label="Dos estrellas"><svg aria-hidden="true"><use href="#star"/></svg><svg aria-hidden="true"><use href="#star"/></svg><svg class="off" aria-hidden="true"><use href="#star"/></svg></div>
+          <p class="star-text"><strong>Todos los pájaros</strong><span>Revienta todos los pájaros para ganar dos estrellas.</span></p>
+        </div>
+        <div class="star-card">
+          <div class="stars" aria-label="Tres estrellas"><svg aria-hidden="true"><use href="#star"/></svg><svg aria-hidden="true"><use href="#star"/></svg><svg aria-hidden="true"><use href="#star"/></svg></div>
+          <p class="star-text"><strong>Par</strong><span>Revienta todos los pájaros dentro del par para ganar tres estrellas.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="wrap section">
+      <h2>Características</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="../assets/feature-aim-1040.webp?v=20261002" srcset="../assets/feature-aim-640.webp?v=20261002 640w, ../assets/feature-aim-1040.webp?v=20261002 1040w" sizes="(min-width: 901px) 360px, (min-width: 601px) 50vw, 100vw" width="1040" height="520" loading="lazy" alt="El nivel 60 con pájaros con casco detrás de muros de ladrillo, una zona de viento, dos portales y un pájaro dorado">
+          <h3>Apunta, elige la fuerza, dispara</h3>
+          <p>Toca en cualquier sitio para apuntar y arrastra para dar fuerza. Rebota en los rebotadores, rompe muros que se desmoronan y acierta a los pájaros de bolos, que sueltan una bola gratis al reventar. Las superbolas son más pequeñas y rápidas.</p>
+        </article>
+        <article class="card">
+          <img src="../assets/feature-stars-1040.webp?v=20261002" srcset="../assets/feature-stars-640.webp?v=20261002 640w, ../assets/feature-stars-1040.webp?v=20261002 1040w" sizes="(min-width: 901px) 360px, (min-width: 601px) 50vw, 100vw" width="1040" height="520" loading="lazy" alt="La tarjeta de nivel superado con tres estrellas y oro: los 30 pájaros en 6 tiros, por debajo del par 7, un nuevo récord">
+          <h3>Supera tu mejor marca</h3>
+          <p>Menos tiros y, después, menos tiempo. Cada nivel guarda tu mejor intento, y un intento dentro del par te da las tres estrellas. Revienta también el pájaro dorado, dentro del par de oro, para ganar oro. ¿Ya no queda ningún pájaro y te sobran tiros? Sigue a por el pájaro dorado.</p>
+          <p class="fine">¿Por poco? Usa una bola extra y termina el nivel.</p>
+        </article>
+        <article class="card">
+          <img src="../assets/feature-best-1040.webp" srcset="../assets/feature-best-640.webp 640w, ../assets/feature-best-1040.webp 1040w" sizes="(min-width: 901px) 360px, (min-width: 601px) 50vw, 100vw" width="1040" height="520" loading="lazy" alt="La cuadrícula de niveles del paquete 3 con estrellas, oro, mejor marca y par en cada nivel superado, el siguiente nivel y niveles bloqueados">
+          <h3>Todos los niveles de un vistazo</h3>
+          <p>La cuadrícula de niveles muestra tus estrellas, tu oro, tu mejor marca y el par de cada nivel, así ves enseguida dónde te falta una estrella.</p>
+        </article>
+        <article class="card">
+          <img src="../assets/feature-editor-1040.webp" srcset="../assets/feature-editor-640.webp 640w, ../assets/feature-editor-1040.webp 1040w" sizes="(min-width: 901px) 360px, (min-width: 601px) 50vw, 100vw" width="1040" height="520" loading="lazy" alt="El editor de niveles con pájaros, pájaros bomba y con casco, muros, un rebotador, dos portales y una zona de viento sobre una cuadrícula">
+          <h3>Crea tus propios niveles</h3>
+          <p>Coloca pájaros, muros, rebotadores, portales y zonas de viento sobre una cuadrícula, dale un número de bolas y pulsa Jugar para probarlo.</p>
+        </article>
+        <article class="card">
+          <img src="../assets/feature-my-levels-1040.webp" srcset="../assets/feature-my-levels-640.webp 640w, ../assets/feature-my-levels-1040.webp 1040w" sizes="(min-width: 901px) 360px, (min-width: 601px) 50vw, 100vw" width="1040" height="520" loading="lazy" alt="Mis niveles con un nivel propio y botones para renombrarlo, duplicarlo, borrarlo, editarlo y jugarlo">
+          <h3>Mis niveles</h3>
+          <p>Tus propios niveles te esperan en Mis niveles. Renómbralos, duplícalos, edítalos o juégalos, y tu menor número de tiros se convierte en el par del nivel.</p>
+        </article>
+        <article class="card">
+          <img src="../assets/feature-sync-1040.webp" srcset="../assets/feature-sync-640.webp 640w, ../assets/feature-sync-1040.webp 1040w" sizes="(min-width: 901px) 360px, (min-width: 601px) 50vw, 100vw" width="1040" height="520" loading="lazy" alt="La pantalla de estadísticas con pájaros reventados, tiros, niveles superados, pájaros dorados encontrados, niveles con oro y tiempo de juego">
+          <h3>Tu progreso, en todos tus dispositivos</h3>
+          <p>El progreso y las bolas extra se sincronizan entre tu iPhone y tu iPad con iCloud. Las estadísticas cuentan cada pájaro que has reventado, cada tiro y cada pájaro dorado.</p>
+        </article>
+      </div>
+    </section>
+
+    <div id="levels" class="band">
+      <section class="wrap section" aria-labelledby="levels-title">
+        <div class="split">
+          <div class="split-text">
+            <h2 id="levels-title">80 niveles hechos a mano</h2>
+            <p class="section-intro">Cuatro paquetes de 20 niveles cada uno, y siguen llegando niveles nuevos. El paquete 1 es gratis. Consigue el siguiente paquete con estrellas o desbloquéalos todos de una vez.</p>
+            <ul class="packs">
+              <li><button class="pack" type="button" aria-pressed="true" aria-controls="pack-shot" data-src="../assets/pack-1-1040.webp?v=20261004" data-srcset="../assets/pack-1-640.webp?v=20261004 640w, ../assets/pack-1-1040.webp?v=20261004 1040w" data-alt="Nivel 18 del paquete 1: una bola vuela hacia 44 pájaros de colores en un laberinto de rebotadores grandes"><span class="pack-name">Paquete 1</span><span class="pack-info"><b>Niveles 1 a 20</b>Un comienzo amable que te muestra todos los tipos de pieza.</span><span class="tag">Gratis</span></button></li>
+              <li><button class="pack" type="button" aria-pressed="false" aria-controls="pack-shot" data-src="../assets/pack-2-1040.webp?v=20261004" data-srcset="../assets/pack-2-640.webp?v=20261004 640w, ../assets/pack-2-1040.webp?v=20261004 1040w" data-alt="Nivel 38 del paquete 2: el primer tiro se abre paso entre filas de pájaros y pájaros de bolos entre muros"><span class="pack-name">Paquete 2</span><span class="pack-info"><b>Niveles 21 a 40</b>Consíguelo con 45 estrellas en el paquete 1.</span></button></li>
+              <li><button class="pack" type="button" aria-pressed="false" aria-controls="pack-shot" data-src="../assets/pack-3-1040.webp?v=20261004" data-srcset="../assets/pack-3-640.webp?v=20261004 640w, ../assets/pack-3-1040.webp?v=20261004 1040w" data-alt="Nivel 48 del paquete 3: un pájaro bomba explota y revienta los pájaros a su alrededor"><span class="pack-name">Paquete 3</span><span class="pack-info"><b>Niveles 41 a 60</b>Consíguelo con 45 estrellas en el paquete 2.</span></button></li>
+              <li><button class="pack" type="button" aria-pressed="false" aria-controls="pack-shot" data-src="../assets/pack-4-1040.webp?v=20261004" data-srcset="../assets/pack-4-640.webp?v=20261004 640w, ../assets/pack-4-1040.webp?v=20261004 1040w" data-alt="Nivel 80 del paquete 4: una superbola pasa junto a pájaros con casco, con una zona de viento, portales, un rebotador grande y el pájaro dorado"><span class="pack-name">Paquete 4</span><span class="pack-info"><b>Niveles 61 a 80</b>Los niveles más difíciles. Consíguelo con 45 estrellas en el paquete 3.</span></button></li>
+            </ul>
+          </div>
+          <img id="pack-shot" class="shot pack-shot" src="../assets/pack-1-1040.webp?v=20261004" srcset="../assets/pack-1-640.webp?v=20261004 640w, ../assets/pack-1-1040.webp?v=20261004 1040w" sizes="(min-width: 1201px) 600px, (min-width: 901px) 52vw, 100vw" width="1040" height="520" loading="lazy" alt="Nivel 18 del paquete 1: una bola vuela hacia 44 pájaros de colores en un laberinto de rebotadores grandes">
+        </div>
+
+        <div id="spooky-night" class="special-packs" aria-labelledby="special-title">
+          <h3 id="special-title" class="special-head">Paquetes de niveles especiales</h3>
+          <div class="night">
+            <div class="split">
+              <div class="split-text">
+                <span class="tag">Muy pronto</span>
+                <h2 id="spooky-title">Noche de miedo</h2>
+                <p class="section-intro"><strong>20 niveles de Halloween</strong> llegan en octubre en la nueva sección Paquetes especiales. Bajo la luna te esperan pájaros disfrazados.</p>
+                <h3>Piezas nuevas</h3>
+                <ul class="night-pieces">
+                <li>Pájaros fantasma</li>
+                <li>Murciélagos</li>
+                <li>Calabazas</li>
+                <li>Telarañas</li>
+                <li>Calderos</li>
+                <li>Niveles oscuros con faroles</li>
+                </ul>
+              </div>
+              <img class="shot" src="../assets/spooky-night-1040.webp?v=20261004" srcset="../assets/spooky-night-640.webp?v=20261004 640w, ../assets/spooky-night-1040.webp?v=20261004 1040w" sizes="(min-width: 1201px) 560px, (min-width: 901px) 48vw, 100vw" width="1040" height="520" loading="lazy" alt="Nivel 17 de Noche de miedo bajo la luna llena, con pájaros con sombreros de bruja y capas, murciélagos, calabazas, un caldero y muros de piedra">
+            </div>
+          </div>
+        </div>
+
+        <div class="pieces-head">
+          <h3>Todas las piezas del juego</h3>
+          <p class="classic">Los niveles se componen de catorce piezas. La guía de piezas del juego las muestra todas.</p>
+        </div>
+        <div class="pieces">
+          <div class="piece">
+            <div class="piece-art" aria-hidden="true"><img src="../assets/art/bird-red.svg" alt="" width="120" height="100"></div>
+            <h4>Pájaro</h4>
+            <p>Revienta cuando una bola lo atraviesa. Los pájaros nunca frenan una bola.</p>
+          </div>
+          <div class="piece">
+            <div class="piece-art" aria-hidden="true"><img src="../assets/art/bird-bowling.svg" alt="" width="120" height="104"></div>
+            <h4>Pájaro de bolos</h4>
+            <p>Suelta una bola gratis al reventar.</p>
+          </div>
+          <div class="piece">
+            <div class="piece-art" aria-hidden="true"><img class="wall" src="../assets/art/wall.svg" alt="" width="10" height="50"></div>
+            <h4>Muro</h4>
+            <p>Detiene la bola. Una bola que cae encima resbala hacia abajo.</p>
+          </div>
+          <div class="piece">
+            <div class="piece-art" aria-hidden="true"><img class="wall" src="../assets/art/crumbling-wall.svg" alt="" width="10" height="50"></div>
+            <h4>Muro que se desmorona</h4>
+            <p>Detiene la bola una vez y luego se desmorona.</p>
+          </div>
+          <div class="piece">
+            <div class="piece-art" aria-hidden="true"><img class="bouncer" src="../assets/art/bouncer.svg" alt="" width="20" height="25"></div>
+            <h4>Rebotador</h4>
+            <p>Devuelve la bola a toda velocidad. Es la única forma de que una bola vuelva a subir.</p>
+          </div>
+          <div class="piece">
+            <div class="piece-art" aria-hidden="true"><img class="bouncer big" src="../assets/art/big-bouncer.svg" alt="" width="20" height="100"></div>
+            <h4>Rebotador grande</h4>
+            <p>Un rebotador alto para carambolas largas.</p>
+          </div>
+          <div class="piece">
+            <div class="piece-art" aria-hidden="true"><span class="superball">S</span></div>
+            <h4>Superbola</h4>
+            <p>Más pequeña y rápida que una bola normal.</p>
+          </div>
+          <div class="piece">
+            <div class="piece-art" aria-hidden="true"><span class="arrows">&larr;</span><img src="../assets/art/bird-violet.svg" alt="" width="120" height="100"><span class="arrows">&rarr;</span></div>
+            <h4>Pájaro flotante</h4>
+            <p>Va y viene por un camino corto, así que elige bien el momento.</p>
+          </div>
+          <div class="piece">
+            <div class="piece-art" aria-hidden="true"><span class="arrows">&larr;</span><img class="wall flat" src="../assets/art/wall.svg" alt="" width="10" height="50"><span class="arrows">&rarr;</span></div>
+            <h4>Muro móvil</h4>
+            <p>Los muros y rebotadores pueden deslizarse de un lado a otro.</p>
+          </div>
+          <div class="piece">
+            <div class="piece-art" aria-hidden="true"><img class="tall" src="../assets/art/portal-blue.svg" alt="" width="66" height="102"><img class="tall" src="../assets/art/portal-orange.svg" alt="" width="66" height="102"></div>
+            <h4>Portal</h4>
+            <p>Una bola que entra en un anillo sale por el otro, igual de rápida y en la misma dirección.</p>
+          </div>
+          <div class="piece">
+            <div class="piece-art" aria-hidden="true"><img src="../assets/art/bird-bomb.svg" alt="" width="120" height="100"></div>
+            <h4>Pájaro bomba</h4>
+            <p>Revienta todos los pájaros cercanos. Otros pájaros bomba también estallan.</p>
+          </div>
+          <div class="piece">
+            <div class="piece-art" aria-hidden="true"><img src="../assets/art/bird-armored.svg" alt="" width="120" height="100"><span class="arrows">&rarr;</span><img src="../assets/art/bird-green.svg" alt="" width="120" height="100"></div>
+            <h4>Pájaro con casco</h4>
+            <p>El primer golpe le quita el casco y el segundo revienta al pájaro.</p>
+          </div>
+          <div class="piece">
+            <div class="piece-art" aria-hidden="true"><span class="wind"><img src="../assets/art/wind-streak.svg" alt="" width="120" height="40"></span></div>
+            <h4>Zona de viento</h4>
+            <p>Empuja las bolas hacia un lado mientras la atraviesan.</p>
+          </div>
+          <div class="piece">
+            <div class="piece-art" aria-hidden="true"><img src="../assets/art/bird-golden.svg" alt="" width="120" height="100"></div>
+            <h4>Pájaro dorado</h4>
+            <p>Raro y opcional. Cada uno que revientas pasa a tu colección. Revienta este y todos los pájaros dentro del par de oro para ganar oro.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="game-center" class="wrap section centered" aria-labelledby="gc-title">
+      <h2 id="gc-title">Clasificaciones y 39 logros</h2>
+      <p class="section-intro">Compite con tus amigos en Game Center. Por tu total de estrellas o por los menos tiros en cada nivel y paquete.</p>
+      <ul class="boards">
+        <li><strong>Estrellas totales</strong><span>Todas tus estrellas de todos los niveles, hasta 240.</span></li>
+        <li><strong>Cada nivel</strong><span>Tus menos tiros en cada uno de los 80 niveles.</span></li>
+        <li><strong>Cada paquete</strong><span>Tus mejores tiros sumados en un paquete entero.</span></li>
+        <li><strong>Todos los niveles</strong><span>Tus mejores tiros en todos los niveles juntos, cuando los hayas terminado todos.</span></li>
+      </ul>
+      <p class="section-intro">Y 39 logros que conseguir por el camino.</p>
+      <ul class="badges">
+        <li><img src="../assets/badges/hole-in-one.svg" alt="" width="108" height="108" loading="lazy"><span>Hoyo en uno</span></li>
+        <li><img src="../assets/badges/bank-shot.svg" alt="" width="108" height="108" loading="lazy"><span>Carambola</span></li>
+        <li><img src="../assets/badges/portal-shot.svg" alt="" width="108" height="108" loading="lazy"><span>Tiro por el portal</span></li>
+        <li><img src="../assets/badges/last-ball.svg" alt="" width="108" height="108" loading="lazy"><span>Última bola</span></li>
+        <li><img src="../assets/badges/speed-demon.svg" alt="" width="108" height="108" loading="lazy"><span>A toda velocidad</span></li>
+        <li><img src="../assets/badges/helmets-off.svg" alt="" width="108" height="108" loading="lazy"><span>Fuera cascos</span></li>
+        <li><img src="../assets/badges/golden-all.svg" alt="" width="108" height="108" loading="lazy"><span>Fiebre del oro</span></li>
+        <li><img src="../assets/badges/level-builder.svg" alt="" width="108" height="108" loading="lazy"><span>Constructor de niveles</span></li>
+      </ul>
+    </section>
+
+    <section id="faq" class="wrap section centered" aria-labelledby="faq-title">
+      <h2 id="faq-title">Preguntas</h2>
+      <div class="faq">
+        <details>
+          <summary>¿Cuánto cuesta?</summary>
+          <p>Crazy Elephant se descarga gratis y el paquete 1 se juega gratis. Consigue los paquetes 2, 3 y 4 con estrellas o compra Desbloquear todos para abrir todos los paquetes de niveles, ahora y en el futuro. Las bolas extra (1 o 5) son compras dentro de la app opcionales.</p>
+        </details>
+        <details>
+          <summary>¿Hay anuncios?</summary>
+          <p>No. No hay anuncios, ni seguimiento, ni analíticas.</p>
+        </details>
+        <details>
+          <summary>¿Necesito una cuenta?</summary>
+          <p>No. Abre la app y juega. Inicia sesión en Game Center solo si quieres clasificaciones y logros.</p>
+        </details>
+        <details>
+          <summary>¿Se sincroniza mi progreso?</summary>
+          <p>Sí. Tu progreso y tus bolas extra se sincronizan entre tus dispositivos con iCloud, a través de tu propia cuenta de iCloud.</p>
+        </details>
+        <details>
+          <summary>¿Habrá más niveles?</summary>
+          <p>Sí. Siguen llegando niveles nuevos con las actualizaciones. Desbloquear todos los incluye.</p>
+        </details>
+        <details>
+          <summary>¿En qué idiomas?</summary>
+          <p>Inglés, alemán y español.</p>
+        </details>
+        <details>
+          <summary>¿En qué dispositivos?</summary>
+          <p>Hecho para iPhone y iPad, con iOS 17 o posterior.</p>
+        </details>
+        <details>
+          <summary>¿Puedo jugar sin conexión?</summary>
+          <p>Sí. Todos los niveles y el editor de niveles funcionan sin conexión. La sincronización con iCloud y Game Center la necesitan.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="wrap closing">
+      <img class="elephant" src="../assets/art/elephant-new.svg" alt="" width="240" height="240" loading="lazy">
+      <h2>¿Listo para reventar pájaros?</h2>
+      <a class="store-badge" href="https://apps.apple.com/app/id621333141" aria-label="Descarga Crazy Elephant en el App Store">
+        <img src="../assets/app-store-badge-black.svg" alt="" width="120" height="40">
+      </a>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© 2026 Philipp Jahoda</span>
+    <nav aria-label="Pie de página">
+      <a href="privacy.html">Privacidad</a>
+      <a href="terms.html">Términos</a>
+      <a href="imprint.html">Aviso legal</a>
+      <span class="lang"><a href="../" hreflang="en" lang="en">English</a><span aria-hidden="true">·</span><a href="../de/" hreflang="de" lang="de">Deutsch</a></span>
+    </nav>
+  </footer>
+</div>
+<script>
+(() => {
+  const shot = document.getElementById('pack-shot');
+  const buttons = [...document.querySelectorAll('.packs .pack')];
+  const still = matchMedia('(prefers-reduced-motion: reduce)');
+  let preloaded = false;
+  let shown = 0;
+  const preload = () => {
+    if (preloaded) return;
+    preloaded = true;
+    for (const button of buttons) {
+      const image = new Image();
+      image.sizes = shot.sizes;
+      image.srcset = button.dataset.srcset;
+    }
+  };
+  const show = (button) => {
+    shot.srcset = button.dataset.srcset;
+    shot.src = button.dataset.src;
+    shot.alt = button.dataset.alt;
+  };
+  document.querySelector('.packs').addEventListener('pointerenter', preload);
+  document.querySelector('.packs').addEventListener('focusin', preload);
+  document.querySelector('.packs').addEventListener('touchstart', preload, { passive: true });
+  for (const button of buttons) {
+    button.addEventListener('click', () => {
+      if (button.getAttribute('aria-pressed') === 'true') return;
+      for (const other of buttons) other.setAttribute('aria-pressed', String(other === button));
+      const turn = ++shown;
+      if (still.matches) return show(button);
+      shot.classList.add('fading');
+      setTimeout(() => {
+        if (turn !== shown) return;
+        show(button);
+        shot.decode().catch(() => {}).then(() => { if (turn === shown) shot.classList.remove('fading'); });
+      }, 200);
+    });
+  }
+})();
+</script>
+</body>
+</html>
