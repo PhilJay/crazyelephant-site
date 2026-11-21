@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Presse · Crazy Elephant</title>
-  <meta name="description" content="Pressematerial zu Crazy Elephant: Fakten, Beschreibungen, Screenshots, Icon und Gameplay-Video, frei verwendbar für Berichte über das Spiel.">
+  <meta name="description" content="Pressematerial zu Crazy Elephant: Fakten, Beschreibungen, Screenshots, Icon, Gameplay-Video und Hochformat-Clips, frei verwendbar für Berichte über das Spiel.">
   <meta name="theme-color" content="#d8e7ff">
   <link rel="canonical" href="https://philjay.github.io/crazyelephant-site/de/press.html">
   <link rel="alternate" hreflang="en" href="https://philjay.github.io/crazyelephant-site/press.html">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Crazy Elephant">
   <meta property="og:title" content="Presse · Crazy Elephant">
-  <meta property="og:description" content="Pressematerial zu Crazy Elephant: Fakten, Beschreibungen, Screenshots, Icon und Gameplay-Video, frei verwendbar für Berichte über das Spiel.">
+  <meta property="og:description" content="Pressematerial zu Crazy Elephant: Fakten, Beschreibungen, Screenshots, Icon, Gameplay-Video und Hochformat-Clips, frei verwendbar für Berichte über das Spiel.">
   <meta property="og:url" content="https://philjay.github.io/crazyelephant-site/de/press.html">
   <meta property="og:image" content="https://philjay.github.io/crazyelephant-site/assets/og-image.png?v=20261002">
   <meta property="og:locale" content="de_DE">
@@ -682,6 +682,12 @@ img { max-width: 100%; }
   .facts dd { margin-bottom: 10px; }
   .press-shots { grid-template-columns: 1fr; }
 }
+.press-clips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-bottom: 10px; }
+.press-clips figure { margin: 0; font-size: 14px; color: var(--ink-dim); }
+.press-clips video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; border-radius: 14px; box-shadow: var(--shadow-small); margin-bottom: 8px; background: #1d2638; }
+@media (max-width: 600px) {
+  .press-clips { grid-template-columns: 1fr; max-width: 300px; margin-left: auto; margin-right: auto; }
+}
   </style>
   <!-- end styles.css -->
 </head>
@@ -698,20 +704,21 @@ img { max-width: 100%; }
   <main class="wrap legal press">
     <div class="legal-card">
       <h1>Presse</h1>
-      <p>Alles, was man für einen Bericht über Crazy Elephant braucht. Screenshots, Icon, Banner und Video dürfen für Berichte über das Spiel frei verwendet werden.</p>
-      <p class="press-download"><a class="button" href="../assets/press/crazy-elephant-press-kit.zip" download>Pressematerial herunterladen (ZIP, 3,4 MB)</a></p>
-      <p class="updated">Icon in 1.024 px und das Original von 2013, 11 Screenshots, ein Banner, das Gameplay-Video und die Fakten als Text (Englisch).</p>
+      <p>Alles, was man für einen Bericht über Crazy Elephant braucht. Screenshots, Icon, Banner und Videos dürfen für Berichte über das Spiel frei verwendet werden.</p>
+      <p class="press-download"><a class="button" href="../assets/press/crazy-elephant-press-kit.zip" download>Pressematerial herunterladen (ZIP, 6,1 MB)</a></p>
+      <p class="updated">Icon in 1.024 px, 11 Screenshots, ein Banner, das Gameplay-Video, drei Hochformat-Clips und die Fakten als Text (Englisch).</p>
 
       <h2>Fakten</h2>
       <dl class="facts">
         <dt>Name</dt><dd>Crazy Elephant</dd>
         <dt>Genre</dt><dd>Physik-Puzzle, Trickschuss</dd>
-        <dt>Plattformen</dt><dd>iPhone und iPad ab iOS bzw. iPadOS 17. Läuft auch auf Macs ab Apple M1 und auf Apple Vision.</dd>
+        <dt>Plattformen</dt><dd>iPhone und iPad ab iOS bzw. iPadOS 17. Läuft auch auf Macs mit Apple M1 oder neuer und macOS 14 oder neuer (für das iPad gestaltet) und auf Apple Vision Pro ab visionOS 1.</dd>
         <dt>Erstveröffentlichung</dt><dd>2013 im App Store</dd>
         <dt>Neu gebaut</dt><dd>2026, von Grund auf</dd>
-        <dt>Preis</dt><dd>Kostenloser Download. Optionale In-App-Käufe. Keine Werbung.</dd>
+        <dt>Preis</dt><dd>Kostenloser Download. Keine Werbung. Optionale In-App-Käufe: Alle Pakete freischalten, Extrakugeln und Tipps.</dd>
         <dt>Sprachen</dt><dd>Deutsch, Englisch, Spanisch</dd>
-        <dt>Level</dt><dd>80 in vier Paketen, ein Spielplatz mit 10 Leveln und 20 in der Gruselnacht</dd>
+        <dt>Level</dt><dd>110: 80 in vier Paketen, ein Spielplatz mit 10 Leveln und 20 in der Gruselnacht</dd>
+        <dt>Sterne</dt><dd>330 Sterne und 110 Gold: drei Sterne und ein versteckter goldener Vogel in jedem Level</dd>
         <dt>Game Center</dt><dd>43 Erfolge und Bestenlisten</dd>
         <dt>Entwickler</dt><dd>Philipp Jahoda, Linz, Österreich</dd>
       </dl>
@@ -753,10 +760,17 @@ img { max-width: 100%; }
       <video class="press-video" src="../assets/hero.mp4" poster="../assets/hero-poster.webp" width="1280" height="640" controls muted loop playsinline preload="none"></video>
       <p class="updated">Ein Gold-Durchgang, Bild für Bild aus dem Spiel gerendert. MP4, 12 Sekunden, in Schleife. <a href="../assets/hero.mp4" download>MP4</a></p>
 
+      <h2>Hochformat-Clips</h2>
+      <div class="press-clips">
+        <figure><video src="../assets/press/clips/crazy-elephant-clip-1-one-ball.mp4" poster="../assets/press/clips/crazy-elephant-clip-1-one-ball.webp" width="540" height="960" controls playsinline preload="none"></video><figcaption>Eine Kugel, 25 Vögel (Level 22), 11 s · <a href="../assets/press/clips/crazy-elephant-clip-1-one-ball.mp4" download>MP4</a></figcaption></figure>
+        <figure><video src="../assets/press/clips/crazy-elephant-clip-2-bomb-chain.mp4" poster="../assets/press/clips/crazy-elephant-clip-2-bomb-chain.webp" width="540" height="960" controls playsinline preload="none"></video><figcaption>Schuss 1 löst eine Kette aus 18 Bomben aus (Level 70), 14 s · <a href="../assets/press/clips/crazy-elephant-clip-2-bomb-chain.mp4" download>MP4</a></figcaption></figure>
+        <figure><video src="../assets/press/clips/crazy-elephant-clip-3-golden-bird.mp4" poster="../assets/press/clips/crazy-elephant-clip-3-golden-bird.webp" width="540" height="960" controls playsinline preload="none"></video><figcaption>Der goldene Vogel (Level 14), 10 s · <a href="../assets/press/clips/crazy-elephant-clip-3-golden-bird.mp4" download>MP4</a></figcaption></figure>
+      </div>
+      <p class="updated">Drei Clips im Format 9:16 (1080 x 1920) mit Untertiteln und Spielsounds, fertig für Shorts, Reels und TikTok. Die Flugbahnen stammen aus der Physik-Engine des Spiels und sind mit der Grafik des Spiels gezeichnet.</p>
+
       <h2>Icon</h2>
       <div class="press-icons">
-        <figure><a href="../assets/press/icon-1024.png" download><img src="../assets/press/icon-1024.png" width="128" height="128" alt="Das Icon heute" loading="lazy"></a><figcaption>Das Icon heute</figcaption></figure>
-        <figure><a href="../assets/press/icon-2013.png" download><img src="../assets/press/icon-2013.png" width="128" height="128" alt="Das Original von 2013" loading="lazy"></a><figcaption>Das Original von 2013</figcaption></figure>
+        <figure><a href="../assets/press/icon-1024.png" download><img src="../assets/press/icon-1024.png" width="128" height="128" alt="App-Icon, 1.024 px" loading="lazy"></a><figcaption>App-Icon, 1.024 px</figcaption></figure>
       </div>
 
       <h2>Links</h2>
