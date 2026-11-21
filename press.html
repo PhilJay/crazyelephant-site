@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Press kit · Crazy Elephant</title>
+  <meta name="description" content="Press kit for Crazy Elephant: fact sheet, descriptions, screenshots, icon and gameplay video, free to use in coverage of the game.">
+  <meta name="theme-color" content="#d8e7ff">
+  <link rel="canonical" href="https://philjay.github.io/crazyelephant-site/press.html">
+  <link rel="alternate" hreflang="en" href="https://philjay.github.io/crazyelephant-site/press.html">
+  <link rel="alternate" hreflang="de" href="https://philjay.github.io/crazyelephant-site/de/press.html">
+  <link rel="alternate" hreflang="es" href="https://philjay.github.io/crazyelephant-site/es/press.html">
+  <link rel="alternate" hreflang="x-default" href="https://philjay.github.io/crazyelephant-site/press.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Crazy Elephant">
+  <meta property="og:title" content="Press kit · Crazy Elephant">
+  <meta property="og:description" content="Press kit for Crazy Elephant: fact sheet, descriptions, screenshots, icon and gameplay video, free to use in coverage of the game.">
+  <meta property="og:url" content="https://philjay.github.io/crazyelephant-site/press.html">
+  <meta property="og:image" content="https://philjay.github.io/crazyelephant-site/assets/og-image.png?v=20261002">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- inlined from styles.css, run build.sh after editing it -->
+  <style>
+@font-face {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(assets/fonts/nunito-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: Anton;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/anton-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: "Dancing Script";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(assets/fonts/dancing-script.woff2) format('woff2');
+}
+
+:root {
+  --ink: #1e2a3a;
+  --ink-soft: rgba(30, 42, 58, 0.74);
+  --ink-dim: rgba(30, 42, 58, 0.56);
+  --navy: #26396a;
+  --star: #ffc928;
+  --star-deep: #e0a200;
+  --link: #2f6ae0;
+  --sky-light: linear-gradient(180deg, #d8e7ff 0%, #f7faff 100%);
+  --sky-game: linear-gradient(160deg, #4a85ff 0%, #b8ccff 100%);
+  --card: #fff;
+  --line: rgba(30, 42, 58, 0.1);
+  --shadow: 0 18px 48px rgba(38, 57, 106, 0.16);
+  --shadow-small: 0 8px 22px rgba(38, 57, 106, 0.12);
+  --label: Anton, Impact, "Arial Narrow", sans-serif;
+  --script: "Dancing Script", "Snell Roundhand", cursive;
+  --gutter: 64px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Nunito, -apple-system, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  color: var(--ink);
+  background: #f7faff;
+  overflow-x: hidden;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, p { margin: 0; }
+
+img { max-width: 100%; }
+
+.stage {
+  background: var(--sky-light) no-repeat;
+  background-size: 100% 1100px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  font-family: var(--script);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  white-space: nowrap;
+}
+.brand:hover { color: var(--ink); text-decoration: none; }
+.brand img { width: 40px; height: 40px; border-radius: 10px; box-shadow: var(--shadow-small); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  font-family: var(--label);
+  font-size: 15px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.nav-links a { color: var(--ink); }
+.nav-links a:hover { color: var(--link); text-decoration: none; }
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--star);
+  color: var(--ink);
+  font-family: var(--label);
+  font-size: 17px;
+  letter-spacing: 0.4px;
+  box-shadow: inset 0 -4px 0 var(--star-deep);
+  text-transform: none;
+}
+.button:hover { color: var(--ink); text-decoration: none; filter: brightness(1.04); }
+.nav-links .button { color: var(--ink); height: 40px; font-size: 16px; }
+
+.lang { display: inline-flex; align-items: center; gap: 8px; }
+.lang span { color: var(--ink-dim); }
+.nav-links .lang { font-size: 13px; }
+.nav-links .lang a { color: var(--ink-soft); }
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+.store-badge:hover { opacity: 0.82; }
+.store-badge img { height: 44px; width: auto; display: block; }
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-block: 40px 28px;
+  text-align: center;
+}
+.hero > * { position: relative; z-index: 1; }
+
+.eyebrow {
+  font-family: var(--label);
+  font-size: 14px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.hero h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-weight: 400;
+}
+.hero h1 .title {
+  font-family: var(--script);
+  font-weight: 700;
+  font-size: clamp(56px, 9vw, 104px);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.hero h1 .subtitle {
+  font-family: var(--label);
+  font-size: clamp(26px, 4vw, 40px);
+  line-height: 1.1;
+  letter-spacing: 0.3px;
+}
+
+.lead {
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 620px;
+}
+
+.cta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6px;
+}
+.cta-note { font-size: 15px; font-weight: 700; color: var(--ink-dim); }
+
+.deco { position: absolute; pointer-events: none; z-index: 0; height: auto; }
+.deco.cloud-a { width: 190px; left: -40px; top: 40px; opacity: 0.95; }
+.deco.cloud-b { width: 150px; right: -20px; top: 150px; }
+.deco.bird-a { width: 46px; left: 11%; top: 250px; transform: scaleX(-1) rotate(-8deg); }
+.deco.bird-b { width: 40px; right: 13%; top: 60px; transform: rotate(-6deg); }
+.deco.bird-c { width: 36px; right: 6%; top: 330px; transform: rotate(8deg); }
+
+.hero-video { position: relative; padding-block: 12px 72px; }
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  aspect-ratio: 2 / 1;
+  border-radius: 26px;
+  border: 8px solid #fff;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--sky-game);
+}
+.frame video,
+.frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-block: 24px 72px;
+}
+.section.centered { align-items: center; text-align: center; }
+.section h2 {
+  font-family: var(--script);
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+.section-intro {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 700px;
+}
+
+.stars-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  max-width: 900px;
+}
+.star-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 22px 18px;
+  border-radius: 20px;
+  background: var(--card);
+  box-shadow: var(--shadow-small);
+  text-align: center;
+}
+.star-card .stars { display: flex; gap: 4px; height: 34px; align-items: center; }
+.star-card .stars svg { width: 30px; height: 30px; }
+.star-card .stars svg.off { opacity: 0.18; }
+.star-text { display: flex; flex-direction: column; gap: 4px; }
+.star-card strong { font-family: var(--label); font-weight: 400; font-size: 20px; letter-spacing: 0.3px; }
+.star-card span { font-size: 15px; line-height: 1.45; color: var(--ink-soft); }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 24px 24px;
+  border-radius: 22px;
+  background: var(--card);
+  box-shadow: var(--shadow-small);
+  overflow: hidden;
+}
+.card img {
+  display: block;
+  width: calc(100% + 48px);
+  max-width: none;
+  height: auto;
+  margin: 0 -24px 12px;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  background: #b8ccff;
+}
+.card h3 { font-family: var(--label); font-weight: 400; font-size: 23px; letter-spacing: 0.3px; line-height: 1.15; }
+.card p { font-size: 15.5px; line-height: 1.5; color: var(--ink-soft); }
+.card .fine { font-size: 13.5px; color: var(--ink-dim); margin-top: auto; padding-top: 4px; }
+
+.band {
+  background: var(--sky-game);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.band .section-intro { color: rgba(255, 255, 255, 0.9); }
+.band .section { padding-block: 72px; }
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 44px;
+  align-items: center;
+}
+.split-text { display: flex; flex-direction: column; gap: 18px; }
+
+.packs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.packs li {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--ink);
+  box-shadow: var(--shadow-small);
+}
+.packs .pack {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 16px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+.js .packs li { transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease; }
+.js .packs li:has([aria-pressed="false"]) { background: rgba(255, 255, 255, 0.8); }
+.js .packs li:hover { transform: translateY(-2px); background: #fff; }
+.js .packs li:has([aria-pressed="true"]) { background: #fff; box-shadow: 0 0 0 4px var(--star), var(--shadow-small); }
+.js .packs .pack { cursor: pointer; }
+.packs .pack:focus-visible { outline: 3px solid var(--navy); outline-offset: 4px; }
+.pack-shot { transition: opacity 0.2s ease; }
+.pack-shot.fading { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .js .packs li, .pack-shot { transition: none; }
+  .js .packs li:hover { transform: none; }
+}
+.packs .pack-name { font-family: var(--script); font-weight: 700; font-size: 30px; line-height: 1; min-width: 86px; flex: none; white-space: nowrap; }
+.packs .pack-info { display: flex; flex-direction: column; gap: 2px; font-size: 14.5px; line-height: 1.35; color: var(--ink-soft); }
+.packs .pack-info b { font-family: var(--label); font-weight: 400; font-size: 17px; color: var(--ink); letter-spacing: 0.3px; }
+.tag {
+  margin-left: auto;
+  flex: none;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--star);
+  font-family: var(--label);
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.tag.navy { background: var(--navy); color: #fff; }
+
+.shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 6px solid #fff;
+  box-shadow: 0 24px 60px rgba(20, 40, 100, 0.28);
+  aspect-ratio: 2 / 1;
+  background: #b8ccff;
+}
+
+.pieces-head { display: flex; flex-direction: column; gap: 10px; margin-top: 36px; }
+.pieces-head h3 { font-family: var(--label); font-weight: 400; font-size: 26px; letter-spacing: 0.4px; }
+.pieces {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.piece {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px 16px;
+  border-radius: 18px;
+  background: #fff;
+  color: var(--ink);
+  box-shadow: var(--shadow-small);
+}
+.piece-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 64px;
+  border-radius: 12px;
+  background: #eaf1ff;
+  margin-bottom: 4px;
+}
+.piece-art img { height: 36px; width: auto; }
+.piece-art .tall { height: 46px; }
+.piece-art .arrows { font-family: var(--label); font-size: 18px; color: var(--navy); letter-spacing: 1px; }
+.piece-art .wall { height: 46px; }
+.piece-art .wall.flat { height: 60px; transform: rotate(90deg); margin: 0 12px; }
+.piece-art .bouncer { height: 30px; }
+.piece-art .bouncer.big { height: 56px; }
+.piece-art .superball { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; border: 6px solid #dc1a1f; background: #fff; color: #dc1a1f; font: 900 11px/1 system-ui, sans-serif; box-sizing: border-box; }
+.piece-art .wind { display: flex; align-items: center; justify-content: center; width: 78px; height: 44px; border: 2px dashed #4a85ff; border-radius: 8px; background: #7ea8ff; }
+.piece-art .wind img { height: 14px; }
+.piece h4 { margin: 0; font-family: var(--label); font-weight: 400; font-size: 18px; letter-spacing: 0.3px; }
+.piece p { font-size: 14px; line-height: 1.45; color: var(--ink-soft); }
+.classic { font-size: 16px; line-height: 1.55; color: rgba(255, 255, 255, 0.92); }
+
+.special-packs { display: flex; flex-direction: column; gap: 16px; margin-top: 36px; }
+.special-head { font-family: var(--label); font-weight: 400; font-size: 26px; letter-spacing: 0.4px; }
+.night .section-intro strong { color: #fff; }
+.night {
+  padding: 44px;
+  border-radius: 28px;
+  background: linear-gradient(160deg, #2b1c57 0%, #4a2f7d 100%);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.night .section-intro { color: rgba(255, 255, 255, 0.88); }
+.night .tag { align-self: flex-start; margin-left: 0; }
+.night h3 { font-family: var(--label); font-weight: 400; font-size: 20px; letter-spacing: 0.4px; margin: 4px 0 -6px; }
+.night-pieces { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.night-pieces li {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 15px;
+  font-weight: 700;
+}
+.night .shot { border-color: rgba(255, 255, 255, 0.16); background: #2b1c57; box-shadow: 0 24px 60px rgba(10, 4, 30, 0.45); }
+
+.boards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.boards li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px 18px;
+  border-radius: 20px;
+  background: var(--card);
+  box-shadow: var(--shadow-small);
+}
+.boards strong { font-family: var(--label); font-weight: 400; font-size: 20px; letter-spacing: 0.3px; }
+.boards span { font-size: 15px; line-height: 1.45; color: var(--ink-soft); }
+
+.badges {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.badges li { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.badges img {
+  width: 100%;
+  max-width: 108px;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: var(--shadow-small);
+}
+.badges span { font-family: var(--label); font-size: 15px; letter-spacing: 0.3px; line-height: 1.2; }
+
+.faq { width: 100%; max-width: 780px; display: flex; flex-direction: column; gap: 12px; }
+.faq details {
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow-small);
+  padding: 0 22px;
+}
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 18px;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--label);
+  font-size: 19px;
+  letter-spacing: 0.3px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+";
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-family: Nunito, sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1;
+}
+.faq details[open] summary::after { content: "\2212"; }
+.faq details p { padding-bottom: 18px; font-size: 16px; line-height: 1.55; color: var(--ink-soft); }
+
+.closing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-block: 24px 64px;
+  text-align: center;
+}
+.closing img.elephant { width: 150px; height: auto; }
+.closing h2 { font-family: var(--script); font-weight: 700; font-size: 48px; line-height: 1.05; }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-block: 28px 40px;
+  background: linear-gradient(var(--line), var(--line)) center top / calc(100% - 2 * var(--gutter)) 1px no-repeat;
+  font-size: 14px;
+  color: var(--ink-dim);
+}
+.footer nav { display: flex; gap: 22px; flex-wrap: wrap; }
+.footer a { color: var(--ink-soft); font-weight: 700; }
+
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-block: 32px 72px;
+  font-size: 16.5px;
+  line-height: 1.62;
+  color: var(--ink-soft);
+}
+.legal-card {
+  padding: 40px 44px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow-small);
+}
+.legal h1 { font-family: var(--script); font-weight: 700; font-size: 52px; line-height: 1.05; color: var(--ink); margin-bottom: 8px; }
+.legal h2 { font-family: var(--label); font-weight: 400; font-size: 22px; letter-spacing: 0.3px; color: var(--ink); margin-top: 34px; margin-bottom: 8px; }
+.legal p { margin-bottom: 14px; }
+.legal ul { margin: 0 0 14px; padding-left: 22px; }
+.legal li { margin-bottom: 6px; }
+.legal .updated { font-size: 14px; color: var(--ink-dim); }
+.legal .back { display: inline-block; margin-top: 28px; font-weight: 700; }
+
+.press { max-width: 960px; }
+.press .press-download { margin: 22px 0 8px; }
+.press .button { height: auto; min-height: 44px; padding: 10px 22px; text-align: center; }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 8px 24px; margin: 0 0 14px; }
+.facts dt { font-weight: 800; color: var(--ink); }
+.facts dd { margin: 0; }
+.press-shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-bottom: 10px; }
+.press-shots a { display: block; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-small); }
+.press-shots img { display: block; width: 100%; height: auto; }
+.press-video { display: block; width: 100%; height: auto; border-radius: 14px; box-shadow: var(--shadow-small); margin-bottom: 10px; background: #b8ccff; }
+.press-icons { display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 14px; }
+.press-icons figure { margin: 0; text-align: center; font-size: 14px; color: var(--ink-dim); }
+.press-icons img { display: block; width: 128px; height: 128px; border-radius: 28px; box-shadow: var(--shadow-small); margin-bottom: 8px; }
+
+.not-found { display: flex; flex-direction: column; align-items: center; gap: 18px; padding-block: 48px 96px; text-align: center; }
+.not-found img { width: 160px; height: auto; }
+.not-found h1 { font-family: var(--script); font-weight: 700; font-size: 60px; line-height: 1; }
+.not-found p { font-size: 18px; color: var(--ink-soft); }
+
+@media (max-width: 1100px) {
+  .badges { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 560px; }
+}
+
+@media (max-width: 900px) {
+  :root { --gutter: 32px; }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .split { grid-template-columns: 1fr; gap: 28px; }
+  .pieces { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .nav-links a:not(.button) { display: none; }
+  .nav-links .lang { display: none; }
+}
+
+@media (max-width: 600px) {
+  :root { --gutter: 16px; }
+  .nav { padding-block: 14px; }
+  .brand { font-size: 24px; }
+  .brand img { width: 36px; height: 36px; }
+  .hero { padding-top: 20px; gap: 14px; }
+  .lead { font-size: 17px; }
+  .deco.cloud-a { width: 120px; left: -44px; top: 10px; }
+  .deco.cloud-a { opacity: 0.8; }
+  .deco.bird-a, .deco.bird-b, .deco.cloud-b { display: none; }
+  .deco.bird-c { display: none; }
+  .hero-video { padding-bottom: 48px; }
+  .frame { border-width: 5px; border-radius: 16px; }
+  .section { padding-bottom: 56px; }
+  .section h2 { font-size: 42px; }
+  .band .section { padding-block: 52px; }
+  .stars-row { grid-template-columns: 1fr; gap: 10px; }
+  .boards { grid-template-columns: 1fr; gap: 10px; }
+  .boards li { padding: 14px 16px; }
+  .star-card { flex-direction: row; text-align: left; padding: 14px 16px; gap: 14px; }
+  .star-card .stars { flex: none; width: 102px; }
+  .star-card .stars svg { width: 28px; height: 28px; }
+  .star-text { display: flex; flex-direction: column; gap: 2px; }
+  .cards { grid-template-columns: 1fr; gap: 16px; }
+  .card { padding: 0 20px 20px; }
+  .card img { width: calc(100% + 40px); margin: 0 -20px 10px; }
+  .packs .pack { gap: 12px; padding: 12px 14px; }
+  .packs .pack-name { font-size: 26px; min-width: 64px; }
+  .tag { font-size: 11px; padding: 3px 8px; }
+  .shot { border-width: 4px; border-radius: 14px; }
+  .night { padding: 24px 18px; border-radius: 20px; }
+  .pieces { gap: 10px; }
+  .piece { padding: 12px; }
+  .piece-art { height: 56px; }
+  .badges { gap: 14px 10px; }
+  .badges span { font-size: 13px; }
+  .faq details { padding: 0 16px; }
+  .faq summary { font-size: 17px; }
+  .closing h2 { font-size: 40px; }
+  .legal-card { padding: 28px 20px; border-radius: 18px; }
+  .legal h1 { font-size: 42px; }
+  .facts { grid-template-columns: 1fr; gap: 2px; }
+  .facts dd { margin-bottom: 10px; }
+  .press-shots { grid-template-columns: 1fr; }
+}
+  </style>
+  <!-- end styles.css -->
+</head>
+<body>
+<div class="stage">
+  <header class="wrap nav">
+    <a class="brand" href="index.html"><img src="assets/icon-96.png" alt="" width="40" height="40">Crazy Elephant</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <span class="lang"><a href="de/press.html" hreflang="de" lang="de">Deutsch</a><span aria-hidden="true">·</span><a href="es/press.html" hreflang="es" lang="es">Español</a></span>
+    </nav>
+  </header>
+
+  <main class="wrap legal press">
+    <div class="legal-card">
+      <h1>Press kit</h1>
+      <p>Everything for writing about Crazy Elephant in one place. The screenshots, icon, banner and video are free to use in coverage of the game.</p>
+      <p class="press-download"><a class="button" href="assets/press/crazy-elephant-press-kit.zip" download>Download the press kit (ZIP, 3.4 MB)</a></p>
+      <p class="updated">Icon in 1,024 px and the 2013 original, 11 screenshots, a banner, the gameplay video and this fact sheet as text.</p>
+
+      <h2>Fact sheet</h2>
+      <dl class="facts">
+        <dt>Name</dt><dd>Crazy Elephant</dd>
+        <dt>Genre</dt><dd>Physics puzzle, trick-shot</dd>
+        <dt>Platforms</dt><dd>iPhone and iPad with iOS or iPadOS 17 or later. Also runs on Macs with Apple M1 or later and on Apple Vision.</dd>
+        <dt>First release</dt><dd>2013, on the App Store</dd>
+        <dt>Rebuilt</dt><dd>2026, from scratch</dd>
+        <dt>Price</dt><dd>Free to download. Optional in-app purchases. No ads.</dd>
+        <dt>Languages</dt><dd>English, German, Spanish</dd>
+        <dt>Levels</dt><dd>80 in four packs, a 10-level Playground and 20 in Spooky Night</dd>
+        <dt>Game Center</dt><dd>43 achievements and leaderboards</dd>
+        <dt>Developer</dt><dd>Philipp Jahoda, Linz, Austria</dd>
+      </dl>
+
+      <h2>Short description</h2>
+      <p>Crazy Elephant is a trick-shot puzzle game for iPhone and iPad. First put on the App Store in 2013, it has now been rebuilt from scratch: an elephant fires bowling balls into the sky, and every bird up there has to pop, in as few shots as possible.</p>
+
+      <h2>Long description</h2>
+      <p>Crazy Elephant was first put on the App Store in 2013. Now it has been rebuilt from scratch for today's iPhone and iPad, with new art, new pieces and a new way to score.</p>
+      <p>The idea stayed simple. An elephant fires bowling balls into the sky, and every bird up there has to pop. Players aim, set the power and fire, banking shots off bouncers, cracking crumbling walls and hitting bowling birds that drop an extra ball when they pop.</p>
+      <p>Every level is scored like golf. Clearing it earns a star, popping every bird earns two, and doing it within par earns three. A rare golden bird hides in each level for players who want gold. A par solver checks every official level, so every par can really be reached.</p>
+      <p>The game has 80 hand-made levels in four packs, a Playground to learn the shots, and Spooky Night with 20 Halloween levels. A level editor lets players build their own levels, and their fewest shots become the par. There are no ads, no account and no tracking, and every level works offline.</p>
+
+      <h2>Features</h2>
+      <ul>
+        <li>Aim, set the power, fire: one-touch controls on iPhone and iPad</li>
+        <li>Par and gold par on every level, plus a hidden golden bird</li>
+        <li>14 classic pieces, from bouncers and portals to bomb birds, armored birds and wind zones</li>
+        <li>Spooky Night: ghost birds, bats, pumpkins and dark levels lit by lanterns</li>
+        <li>Level editor and My Levels</li>
+        <li>Game Center leaderboards for total stars and the fewest shots on every level</li>
+        <li>43 achievements</li>
+        <li>Progress, extra balls and unused hints sync with iCloud</li>
+        <li>English, German and Spanish</li>
+      </ul>
+
+      <h2>Screenshots</h2>
+      <div class="press-shots">
+        <a href="assets/feature-aim-1040.webp"><img src="assets/feature-aim-640.webp" srcset="assets/feature-aim-640.webp 640w, assets/feature-aim-1040.webp 1040w" sizes="(max-width: 600px) 100vw, 430px" width="640" height="320" alt="Aiming in level 60, with portals and walls" loading="lazy"></a>
+        <a href="assets/feature-best-1040.webp"><img src="assets/feature-best-640.webp" srcset="assets/feature-best-640.webp 640w, assets/feature-best-1040.webp 1040w" sizes="(max-width: 600px) 100vw, 430px" width="640" height="320" alt="The result card after clearing a level with three stars and gold" loading="lazy"></a>
+        <a href="assets/pack-2-1040.webp"><img src="assets/pack-2-640.webp" srcset="assets/pack-2-640.webp 640w, assets/pack-2-1040.webp 1040w" sizes="(max-width: 600px) 100vw, 430px" width="640" height="320" alt="Level 38 in Pack 2, a wall of birds" loading="lazy"></a>
+        <a href="assets/pack-3-1040.webp"><img src="assets/pack-3-640.webp" srcset="assets/pack-3-640.webp 640w, assets/pack-3-1040.webp 1040w" sizes="(max-width: 600px) 100vw, 430px" width="640" height="320" alt="Level 48 in Pack 3 with bomb birds" loading="lazy"></a>
+        <a href="assets/pack-4-1040.webp"><img src="assets/pack-4-640.webp" srcset="assets/pack-4-640.webp 640w, assets/pack-4-1040.webp 1040w" sizes="(max-width: 600px) 100vw, 430px" width="640" height="320" alt="Level 80, the last level of Pack 4" loading="lazy"></a>
+        <a href="assets/spooky-night-1040.webp"><img src="assets/spooky-night-640.webp" srcset="assets/spooky-night-640.webp 640w, assets/spooky-night-1040.webp 1040w" sizes="(max-width: 600px) 100vw, 430px" width="640" height="320" alt="Spooky Night level 17 under the moon" loading="lazy"></a>
+      </div>
+      <p class="updated">Click a screenshot for the full size. All 11 are in the ZIP as PNG.</p>
+
+      <h2>Gameplay video</h2>
+      <video class="press-video" src="assets/hero.mp4" poster="assets/hero-poster.webp" width="1280" height="640" controls muted loop playsinline preload="none"></video>
+      <p class="updated">A gold run, rendered frame by frame from the game. MP4, 12 seconds, loops. <a href="assets/hero.mp4" download>MP4</a></p>
+
+      <h2>Icon</h2>
+      <div class="press-icons">
+        <figure><a href="assets/press/icon-1024.png" download><img src="assets/press/icon-1024.png" width="128" height="128" alt="The icon today" loading="lazy"></a><figcaption>The icon today</figcaption></figure>
+        <figure><a href="assets/press/icon-2013.png" download><img src="assets/press/icon-2013.png" width="128" height="128" alt="The 2013 original" loading="lazy"></a><figcaption>The 2013 original</figcaption></figure>
+      </div>
+
+      <h2>Links</h2>
+      <ul>
+        <li><a href="https://apps.apple.com/app/id621333141">App Store</a></li>
+        <li><a href="https://philjay.github.io/crazyelephant-site/">Website</a></li>
+        <li><a href="imprint.html">Imprint</a></li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>Press questions, review requests and interviews: <a href="mailto:philjay.librarysup@gmail.com">philjay.librarysup@gmail.com</a></p>
+
+      <a class="back" href="index.html">Back to Crazy Elephant</a>
+    </div>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© 2026 Philipp Jahoda</span>
+    <nav aria-label="Footer">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="imprint.html">Imprint</a>
+      <a href="press.html">Press kit</a>
+      <span class="lang"><a href="de/press.html" hreflang="de" lang="de">Deutsch</a><span aria-hidden="true">·</span><a href="es/press.html" hreflang="es" lang="es">Español</a></span>
+    </nav>
+  </footer>
+</div>
+</body>
+</html>

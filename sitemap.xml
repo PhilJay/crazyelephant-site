@@ -96,4 +96,28 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://philjay.github.io/crazyelephant-site/es/imprint.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://philjay.github.io/crazyelephant-site/imprint.html"/>
   </url>
+  <url>
+    <loc>https://philjay.github.io/crazyelephant-site/press.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://philjay.github.io/crazyelephant-site/press.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://philjay.github.io/crazyelephant-site/de/press.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://philjay.github.io/crazyelephant-site/es/press.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://philjay.github.io/crazyelephant-site/press.html"/>
+  </url>
+  <url>
+    <loc>https://philjay.github.io/crazyelephant-site/de/press.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://philjay.github.io/crazyelephant-site/press.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://philjay.github.io/crazyelephant-site/de/press.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://philjay.github.io/crazyelephant-site/es/press.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://philjay.github.io/crazyelephant-site/press.html"/>
+  </url>
+  <url>
+    <loc>https://philjay.github.io/crazyelephant-site/es/press.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://philjay.github.io/crazyelephant-site/press.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://philjay.github.io/crazyelephant-site/de/press.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://philjay.github.io/crazyelephant-site/es/press.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://philjay.github.io/crazyelephant-site/press.html"/>
+  </url>
 </urlset>
